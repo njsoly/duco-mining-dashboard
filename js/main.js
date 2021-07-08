@@ -216,7 +216,7 @@ function problems(miners, geseffavr, geseffpc){                    //Check for p
             var fix = "<a href='fixes.html'>How to fix</a></p>"
             if((element[0].includes("ESP8266") || element[0].includes("ESP")) && !element[0].includes("ESP32")){
                 var info = "<p id='problems'><b>ESP8266 with Rigname:</b> " + element[7] + " <b>and Softwarename:</b> " + element[0] + " <b>with Hashrate:</b> " + element[1] + "H/s ";
-                if(element[1]<5000){              //Too low Hashrate
+                if(element[1]<4000){              //Too low Hashrate
                     document.getElementById("problemt").innerHTML+=info + " is mining too slow. " + fix;
                     problems++;
                 }
